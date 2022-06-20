@@ -50,6 +50,14 @@ button {
     font-size: 18px;
 }
 
+.title-green {
+    color: var(--green);
+}
+
+.title-purple {
+    color: var(--purple);
+}
+
 header {
     height: calc(100vh - var(--menu-height));
     display: flex;
@@ -105,9 +113,23 @@ nav ul a svg {
     display: none;
 }
 
-section {
-    height: 1500px;
-    background: purple;
+.about-me {
+    display: flex;
+    padding: 100px 0;
+}
+
+.about-me .container {
+    width: 50%;
+    padding-right: 50px;
+}
+
+.about-me .img-container {
+    width: 50%;
+    text-align: center;
+}
+
+.about-me .img-container img {
+    width: 50%;
 }
 
 @media (max-width: 1000px) {
