@@ -5,6 +5,9 @@
     --green: #15CDCB;
     --dark: #212226;
     --lightgray:#E0DEDE;
+    --medium-grey: #2F3034;
+
+
     --menu-height: 75px;
 }
 
@@ -21,7 +24,6 @@ body, button, input, select, textarea {
     font-family: 'Poppins', sans-serif;
     color: white;
 }
-
 
 h1 {
     font-size: 44px;
@@ -45,9 +47,9 @@ button {
     border: 0;
     border-radius: 16px;
     padding: 8px 35px;
-    color: white;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .title-green {
@@ -64,18 +66,14 @@ header {
     align-items: center;
 }
 
-.container {
+header .container {
     width: 50%;
     height: fit-content;
-    padding-left: 100px;
+    padding: 0 100px;
 }
 
 header .container img {
     display: none;
-}
-
-header .container h1 {
-    color: var(--green);
 }
 
 header .container button {
@@ -91,6 +89,8 @@ nav {
     padding: 0 100px;
     position: sticky;
     top: 0;
+
+    z-index: 99;
 }
 
 nav img {
@@ -115,7 +115,7 @@ nav ul a svg {
 
 .about-me {
     display: flex;
-    padding: 100px 0;
+    padding: 100px;
 }
 
 .about-me .container {
@@ -126,27 +126,60 @@ nav ul a svg {
 .about-me .img-container {
     width: 50%;
     text-align: center;
+    position: relative;
 }
 
 .about-me .img-container img {
-    width: 50%;
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
 }
 
+.about-me .img-container .line {
+    width: calc(70% + 50px);
+    height: calc(100% + 50px);
+    border: 1px solid var(--purple);
+
+    position: absolute;
+    top: -25px;
+    left: calc(50% - 70%/2 - 25px);
+}
+
+.about-me .img-container .line.green {
+    transform: rotate(-3.3deg);
+    border: 1px solid var(--green);
+}
+
+/*  RESPONSIVIDADE */
+/* small desktops */
 @media (max-width: 1000px) {
     header .container {
         width: 100%;
-        padding: 0 30px;
     }
-
+    
     nav ul a {
-        font-size: 16px;
+        font-size: 18px;
     }
-
+    
     nav {
         padding: 0 30px;
     }
 
+    .about-me {
+        flex-direction: column;
+    }
 
+    .about-me .container, .about-me .img-container {
+        width: 100%;
+    }
+
+    .about-me .container {
+        padding: 0;
+    }
+
+    .about-me .img-container {
+        margin: 70px 0;
+    }
 }
 
 /* RESPONSIVIDADE TABLET */
