@@ -150,6 +150,99 @@ nav ul a svg {
     border: 1px solid var(--green);
 }
 
+.services {
+    text-align: center;
+    margin: 150px 0;
+    padding: 0 100px;
+}
+
+.services-container, .portfolio-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 60px auto 0;
+}
+
+.services .services-container .service-card {
+    max-width: 360px;
+    background: #2F3034;
+    border: 1px solid var(--purple);
+    border-radius: 16px;
+    padding: 40px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+}
+
+.services .services-container .service-card img {
+    margin-bottom: 40px;
+}
+
+.portfolio {
+    padding: 0 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    background: url('assets/bg.png');
+}
+
+.service-card + .service-card {
+    margin-left: 10px;
+}
+
+.portfolio .portfolio-container .portfolio-card {
+    background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.33) 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(42px);
+    /* Note: backdrop-filter has minimal browser support */
+    border: 1px solid white;
+    max-width: 360px;
+    border-radius: 16px;
+    text-align: left;
+    padding: 50px 25px;
+}
+
+.portfolio .portfolio-container .portfolio-card .img-container {
+    margin: 0px 25px 50px;
+
+}
+
+.portfolio .portfolio-container .portfolio-card .img-container img {
+    width: 100%;
+}
+
+.portfolio .portfolio-container .portfolio-card .language-container {
+    margin-bottom: 20px;
+}
+
+.portfolio .portfolio-container .portfolio-card .language-container ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.portfolio .portfolio-container .portfolio-card .language-container ul li {
+    color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 15px;
+    padding: 3px 15px;
+}
+
+.portfolio-card .language-container ul li + li {
+    margin-left: 10px;
+}
+
+.portfolio-card + .portfolio-card {
+    margin-left: 10px;
+}
+
+p {
+    margin: 0;
+}
+
 /*  RESPONSIVIDADE */
 /* small desktops */
 @media (max-width: 1000px) {
@@ -179,6 +272,25 @@ nav ul a svg {
 
     .about-me .img-container {
         margin: 70px 0;
+    }
+
+    .services {
+        padding: 0;
+    }
+
+    .services .services-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        height: 394px;
+    }
+
+    .service-card + .service-card {
+        margin-left: 0px;
+        margin-top: 30px;
     }
 }
 
@@ -226,5 +338,17 @@ nav ul a svg {
     nav ul a svg {
         display: block;
         margin: 0 auto 10px;
+    }
+
+    .about-me {
+        padding: 40px;
+    }
+
+    .service {
+        margin: 70px 0;
+    }
+
+    .service .services-container {
+        padding: 0 20px;
     }
 }
