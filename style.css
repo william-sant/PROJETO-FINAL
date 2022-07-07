@@ -15,6 +15,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     margin: 0;
     background: var(--dark);
@@ -364,6 +368,40 @@ p {
         max-width: 520px;
     }
 }
+
+.contact {
+    max-width: 700px;
+    margin: 150px auto 70px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.contact h1 {
+    width: fit-content;
+    margin: 50px auto 0px;
+    background: -webkit-linear-gradient(#15CDCB, #5280E2);
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact button {
+    margin: 40px auto;
+    cursor: pointer;
+}
+
+.contact .social-media {
+    max-width: 360px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 
 /* RESPONSIVIDADE TABLET */
 
